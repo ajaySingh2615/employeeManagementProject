@@ -17,8 +17,8 @@ function Employee({ employee, deleteEmployee }) {
           Edit
         </a>
         <a
-          onClick={(e, id) => deleteEmployee((e, employee.id))}
-          className="text-red-600 hover:text-red-800"
+          onClick={(e) => deleteEmployee(e, employee.id)}
+          className="text-red-600 hover:text-red-800 hover:cursor-pointer"
         >
           Delete
         </a>

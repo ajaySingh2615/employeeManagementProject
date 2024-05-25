@@ -24,8 +24,10 @@ function EmployeeList() {
   }, []);
 
   const deleteEmployee = (e, id) => {
+    console.log("here");
     e.preventDefault();
     EmployeeService.deleteEmpolyee(id).then((res) => {
+      console.log("where");
       if (employees) {
         setEmployees((prevElement) => {
           return prevElement.filter((employee) => employee.id !== id);
