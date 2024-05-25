@@ -1,6 +1,6 @@
 import React from "react";
 
-function Employee({ employee }) {
+function Employee({ employee, deleteEmployee }) {
   return (
     <tr key={employee.id}>
       <td className="text-left px-6 py-4 whitespace-nowrap">
@@ -16,7 +16,10 @@ function Employee({ employee }) {
         <a href="#" className="text-indigo-600 hover:text-indigo-800 px-4">
           Edit
         </a>
-        <a href="#" className="text-red-600 hover:text-red-800">
+        <a
+          onClick={(e, id) => deleteEmployee((e, employee.id))}
+          className="text-red-600 hover:text-red-800"
+        >
           Delete
         </a>
       </td>
